@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Assignment_8</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
         body {
             position: absolute;
             top: 25%;
@@ -29,15 +35,13 @@
         }
         section>div:first-child{
             display: flex;
-            align-items: center;
-            margin: revert;
         }
-        section>div:nth-child(1) div img{
+        section div:nth-child(1) div img{
             width: 200px;
-            border-bottom: 3px solid black;
+            border-bottom: 3px solid #939393;
         }
 
-        section>div:nth-child(2) img{
+        section div:nth-child(2) img{
             width: 350px;
 
         }
@@ -45,7 +49,7 @@
         h3 {
             position: relative;
             left: 75%;
-            top: 0;
+            top: 55px;
             color: blue;
         }
     </style>
@@ -87,6 +91,23 @@
     </div>
 </section>
 </div>
+<script>
+    let arr1 = ["A","B","C","D","E","F"];
+    setInterval(() => {
 
+        let last_digit = arr1.pop();
+        arr1.unshift(last_digit);
+        console.log(arr1);
+
+        document.getElementById("1").innerText = arr1[0];
+        document.getElementById("2").innerText = arr1[1];
+        document.getElementById("3").innerText = arr1[2];
+        document.getElementById("4").innerText = arr1[3];
+        document.getElementById("5").innerText = arr1[4];
+        document.getElementById("6").innerText = arr1[5];
+
+    },1000);
+
+</script>
 </body>
 </html>
