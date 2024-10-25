@@ -105,7 +105,20 @@
 <script>
     let color_array = ["yellow","red","hotpink","black","brown","lime"];
 
-    setInterval(() => {},1000);
+    setInterval(() => {
+
+        let last_color = color_array.pop();
+        color_array.unshift(last_color);
+        console.log(color_array);
+
+        $(".first").css("background-color", color_array[0]);
+        $(".second").css("background-color", color_array[1]);
+        $(".third").css("background-color", color_array[2]);
+        $(".fourth").css("background-color", color_array[3]);
+        $(".fifth").css("background-color", color_array[4]);
+        $(".sixth").css("background-color", color_array[5]);
+
+    },1000);
 
 </script>
 </body>
